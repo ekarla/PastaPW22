@@ -1,0 +1,30 @@
+<html>
+<head> 
+<title>Instituto de Computação</title> 
+</head> 
+<body> 
+    <fieldset> 
+        <form name="myForm" method="post"> 
+            Informe o Raio <input id = "id_radio" name="raio" type ="texto">
+            <button type="button"  onclick="getValueInput()"> 
+                OK!! 
+            </button><br> 
+            Área de Círculo <input name="circulo" id = "id_circulo" type="text" value = ""><br> 
+            Circuferencia <input name="circuferencia" id = "id_circuferencia" type="texto"> 
+            
+        </form>
+        
+          
+    </fieldset> 
+    <script>
+
+        const getValueInput = () =>{
+        let inputVal = document.getElementById("id_radio").value;
+        
+        document.getElementById("id_circulo").setAttribute('value',inputVal*inputVal*(3.14));
+        document.getElementById("id_circuferencia").setAttribute('value',inputVal*2*(3.14));
+        }
+    </script>
+</body>
+</html> 
+        
