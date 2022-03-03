@@ -1,20 +1,20 @@
 <html>
 <head> 
-<title>Instituto de Computação</title> 
+<title>Instituto de Computação</title>
+<link rel="stylesheet" type="text/css" href="estilo.css"> 
 </head> 
-<body> 
+<body>
+    <div id="area">
     <fieldset> 
         <form name="myForm" method="post"> 
-            Informe o Raio <input id = "id_radio" name="raio" type ="texto">
+            <label>Informe o Raio</label><input class = "campo" id = "id_radio" name="raio" type ="texto">
             <button type="button"  onclick="getValueInput()"> 
                 OK!! 
             </button><br> 
-            Área de Círculo <input name="circulo" id = "id_circulo" type="text" value = ""><br> 
-            Circuferencia <input name="circuferencia" id = "id_circuferencia" type="texto"> 
+            <label for="ac">Area do Circulo</label> <input class = "campo" name="circulo" id = "id_circulo" type="text" value = ""><br> 
+            <label for="ci">Circuferencia</label> <input class = "campo" name="circuferencia" id = "id_circuferencia" type="texto"> 
             
-        </form>
-        
-          
+        </form>     
     </fieldset> 
     <script>
 
@@ -25,6 +25,7 @@
         document.getElementById("id_circuferencia").setAttribute('value',inputVal*2*(3.14));
         }
     </script>
+    </div> 
 </body>
 </html> 
         
