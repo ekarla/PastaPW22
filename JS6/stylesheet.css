@@ -1,0 +1,26 @@
+.formulario{
+    top:10%;
+    width:700px;
+    height:50px;
+}
+.alt {
+  margin-left: 20px;
+  margin-top: 10px;
+  color: #080808;
+  font-weight: bold;
+  padding-right: 5%;
+}
+.larg {
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #080808;
+    font-weight: bold;
+    padding-right: 5%;
+  }
+.barra{
+    width: 50px;
+    margin-left: 5px;   
+}
+.bt{
+    margin-left: 20px;
+}
