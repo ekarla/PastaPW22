@@ -1,7 +1,8 @@
 .formulario{
+    position:relative;
     top:10%;
     width:700px;
-    height:50px;
+    height:200px;
 }
 .alt {
   margin-left: 20px;
@@ -23,4 +24,11 @@
 }
 .bt{
     margin-left: 20px;
+}
+div{
+    top:400%;    
+    position: relative; 
+    display: inline-block;
+    margin-top: 40px;   
+    
 }

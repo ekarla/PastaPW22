@@ -8,25 +8,73 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
 </head>
 <body>
-    <div class="formulario">
-        <form name="myForm"> 
-            <label class="alt">Informe a altura das barras</label>
-            <input class = "barra" name="barra1" id = "br1" type ="text"> 
-            <input class = "barra" name="barra2" id = "br2" type="text" >
-            <input class = "barra" name="barra3" id = "br3" type="text">
-            <input class = "barra" name="barra4" id = "br4" type="text">
-            <input class = "barra" name="barra5" id = "br5" type="text">
-            <br>
-            <br>
-            <label class="larg">Informe a largura das barras</label>
-            <input class = "barra" name="barra6" id = "br6" type ="text"> 
-        </form>
+    
+    <form name="myForm"> 
+        <label class="alt">Informe a altura das barras</label>
+        <input class = "barra" name="barra1" id = "br1" type ="text"> 
+        <input class = "barra" name="barra2" id = "br2" type="text" >
+        <input class = "barra" name="barra3" id = "br3" type="text">
+        <input class = "barra" name="barra4" id = "br4" type="text">
+        <input class = "barra" name="barra5" id = "br5" type="text">
         <br>
         <br>
-        <button type="button" class="bt" > 
-            Desenhar o grafico. 
-        </button><br>   
-    </div>
-     
+        <label class="larg">Informe a largura das barras</label>
+        <input class = "barra" name="barra6" id = "br6" type ="text"> 
+    </form>
+    <br>
+    <br>
+    <button id="gera" class="bt">Desenhar o grafico.</button>
+    <br>
+        
+        
+    <div id="t1"></div>
+    <div id="t2"></div>
+    <div id="t3"></div>
+    <div id="t4"></div>
+    <div id="t5"></div>  
+      
+         
+             
+        <script>
+                           
+            document.getElementById("gera").onclick = function(){
+                let barra_alt1 = document.getElementById("br1").value;
+                let barra_alt2 = document.getElementById("br2").value;
+                let barra_alt3 = document.getElementById("br3").value;
+                let barra_alt4 = document.getElementById("br4").value;
+                let barra_alt5 = document.getElementById("br5").value;
+                let barra_larg = document.getElementById("br6").value;
+                let grafico1 =  document.getElementById("t1");
+                let grafico2 =  document.getElementById("t2");
+                let grafico3 =  document.getElementById("t3");
+                let grafico4 =  document.getElementById("t4");
+                let grafico5 =  document.getElementById("t5");
+                //gerando barra 1
+                grafico1.style.setProperty("height",barra_alt1 + "px");
+                grafico1.style.setProperty("width",barra_larg + "px");
+                grafico1.style.setProperty("background-color","red");
+
+                //gerando barra 2
+                grafico2.style.setProperty("height",barra_alt2 + "px");
+                grafico2.style.setProperty("width",barra_larg + "px");
+                grafico2.style.setProperty("background-color","red"); 
+                
+                 //gerando barra 3
+                 grafico3.style.setProperty("height",barra_alt3 + "px");
+                 grafico3.style.setProperty("width",barra_larg + "px");
+                 grafico3.style.setProperty("background-color","red");  
+
+                 //gerando barra 4
+                 grafico4.style.setProperty("height",barra_alt4 + "px");
+                 grafico4.style.setProperty("width",barra_larg + "px");
+                 grafico4.style.setProperty("background-color","red"); 
+                 
+                  //gerando barra 5
+                grafico5.style.setProperty("height",barra_alt5 + "px");
+                grafico5.style.setProperty("width",barra_larg + "px");
+                grafico5.style.setProperty("background-color","red");  
+                              
+            }      
+        </script>        
 </body>
 </html>
