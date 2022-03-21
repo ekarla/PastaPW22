@@ -21,7 +21,7 @@
     var velocidade_jogador = 1; //Variavel para alternar a velocidade do jogador ao pressionar a tecla 'f'
     var vidas_jogador = 3; //Começa com 3 vidas
      
-    function init () {
+    function init () { //Função que inicializa o jogo
       montanha = new Montanha();
       skier = new Skier();
       painel = new Painel();
