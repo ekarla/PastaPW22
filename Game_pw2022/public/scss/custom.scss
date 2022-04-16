@@ -8,3 +8,20 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
 }
+.image-index{
+    background-image: url("/img/bannerSkifree.jpg");
+    width: 400px;
+    height: 400px;
+
+}
+
+form [type="submit"]{
+    margin-bottom: 40px;
+}
+.options{
+    text-align: right;
+}
+
+.options a{
+    padding-left: 4px;
+}

@@ -1,5 +1,6 @@
 import { Area } from "../models/index";
 //const Op = models.Sequelize.Op;
+import { Op} from "sequelize";
 
 const index = async(req,res)=>{
     const areas = await Area.findAll({where: true});

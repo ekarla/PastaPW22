@@ -2,6 +2,7 @@ import express, { Router } from "express"
 import router from "./src/router/router";
 import { engine } from "express-handlebars";
 import sass from "node-sass-middleware";
+import { Logger } from "sass";
 
 const morgan = require("morgan");
 const app = express()
@@ -31,6 +32,7 @@ app.use('/js',[
     express.static(`${__dirname}/node_modules/bootstrap/dist/js/`)
 ]);
 //chamando as rotas 
+app.use(express.urlencoded({ extended: false }));
 app.use(router);
 app.use(morgan("combined"));
 
