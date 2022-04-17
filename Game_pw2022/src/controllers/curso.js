@@ -12,6 +12,7 @@ async function create(req,res) {
         res.render("curso/create");
     }else{
         await Curso.create({
+            sigla:req.body.sigla,
             nome: req.body.nome,
             descricao: req.body.descricao,
             areaId: req.body.area

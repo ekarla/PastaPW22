@@ -8,6 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      sigla: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       nome: {
         allowNull: false,
         type: Sequelize.STRING
@@ -15,6 +19,9 @@ module.exports = {
       areaId: {
         allowNull: false,
         type: Sequelize.INTEGER
+      },
+      descricao: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

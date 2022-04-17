@@ -18,10 +18,14 @@
 form [type="submit"]{
     margin-bottom: 40px;
 }
-.options{
+
+
+.campo-opcoes a{
+    padding-left: 2px;
+}
+.campo-opcoes{
     text-align: right;
 }
-
-.options a{
-    padding-left: 4px;
+.campo-id{
+    width: 40px;
 }
