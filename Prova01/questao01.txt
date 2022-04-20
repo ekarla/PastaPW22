@@ -1,0 +1,30 @@
+Erros encontrados no código.
+
+1º erro:
+Comentario na pagina o comando /* .... */ não é a forma correta 
+de marcar um Comentario que não devev ser inserido na página.
+Correção:
+
+<!-- textotextotexo -->
+
+2º erro:
+O paragrafo com vários termos com acentuação gráfica,
+estes termos não serão interpretados de forma correta por não conter
+no código a tag  <meta charset="UTF-8">
+Correção: 
+<head>
+    <meta charset="UTF-8">
+    <title>Instituto de Computação</title>
+</head>
+
+3º erro:
+ tag<strong> a tag é inicializada mas não é finalizada.
+ <strong> </strong>
+
+4º erro:
+o retornno na função script, that.nome.
+
+Correção:
+ this.nome
+
+
