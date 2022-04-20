@@ -1,0 +1,10 @@
+Modelo MVC
+
+O modelo MVC (Model, View, Controller), é modelo de arquitetura de software que 
+permite ter maior manutenabilidade, velocidade nas requisições com o banco de  dados.
+Esta arquitetura divide a construção de software em 3 camadas.
+
+A camada Model é responsavel pela leitura e manipulaçao dos dados e conexão ao banco de dados;
+A camada View é aparte que tratamos as visualização dos dados;
+A camada Controller é responsavel por determinar qual models será
+acessar para ser exibido nas views.
