@@ -7,10 +7,12 @@ import csurf from "csurf";
 import { Logger } from "sass";
 import { v4 as uuidv4} from "uuid";
 import session from "express-session";
+import dotenv from "dotenv";
 
 const morgan = require("morgan");
-const app = express()
+const app = express();
 
+dotenv.config();
 
 app.engine('handlebars',engine({
     helpers: require(`${__dirname}/src/views/helpers/helpers`),
@@ -63,19 +65,9 @@ app.use(session({
     saveUninitialized: true
 })) 
 
-app.get("/session",(req,res)=>{
-    if(!('qtdItens' in req.session)){
-        req.session.qtdItens = 0;
-        res.send("Usuario sem item. Começando agora...");
-    }else{
-        req.session.qtdItens++;
-        res.send("Quantidede de Itens: " + req.session.qtdItens);
-    }
-});
-
-app.get("/apagar-cookie",(req, res)=>{
-    res.clearCookie('usuario');
-    res.send("Cookie Apagado!");
+app.use((req, res, next)=>{
+    app.locals.isLogged = 'uid' in req.session;
+    next();
 })
 
 app.use(router);
@@ -88,7 +80,7 @@ app.use(function(req, res){
     res.end("404!");
 })
 
-app.listen("3333",()=>{
-    console.log("Escutando na porta 3333");
+app.listen(process.env.PORT,()=>{
+    console.log(`Escutando na porta ${process.env.PORT}`);
 });
 
