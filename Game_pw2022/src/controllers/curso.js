@@ -1,5 +1,6 @@
-const models = require("../models/index");
-const Curso = models.Curso;
+//const models = require("../models/index");
+//const Curso = models.Curso;
+import { Curso, Area} from "../models/index";
 
 async function index(req,res) {
     const cursos = await Curso.findAll();
@@ -9,7 +10,9 @@ async function index(req,res) {
 }
 async function create(req,res) {
     if(req.route.methods.get){
-        res.render("curso/create");
+        res.render("curso/create",{
+            csrf: req.csrfToken()
+        });
     }else{
         await Curso.create({
             sigla:req.body.sigla,
@@ -18,17 +21,35 @@ async function create(req,res) {
             areaId: req.body.area
         });
 
-        res.redirect("/")
+        res.redirect("/curso")
     }
     
 }
 async function read(req,res) {
-    const curso = await Curso.findOne({where: {id: req.params.id }});
-    res.render("curso/read",{
-        curso: curso.toJSON()
-    })
+    const { id } = req.params;
+    try{
+        const curso = await Curso.findByPk(id, {include: Area});
+        res.render("curso/read",{
+            curso: curso.toJSON()
+        })
+    }catch(error) {
+        console.log(error);
+    }  
+    
 }
 async function update(req,res) {}
-async function remove(req,res) {}
 
-module.exports = {index, create, update, remove, read}
+async function remove(req,res){
+    const {id} = req.params;
+    try{
+        await Curso.destroy({where: {id: id}});
+        res.send("Curso apagado com sucesso!!");
+    }catch(error){
+        console.log(error);
+        res.status(500).send(error);
+    }
+}
+
+//module.exports = {index, create, update, remove, read}
+
+export default  {index, create, update, remove, read}
