@@ -1,3 +1,5 @@
+Comentário: Padrão MVC descrito corretamente. Nota 2.0
+
 Modelo MVC
 
 O modelo MVC (Model, View, Controller), é modelo de arquitetura de software que 

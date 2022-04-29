@@ -1,3 +1,5 @@
+// Comentário: código implementado corretamente. Nota 2.0
+
 const fs = require('fs');
 var p1 = new Promise(function (resolve, reject) {
     fs.readFile('./1.txt', function(error, data) {

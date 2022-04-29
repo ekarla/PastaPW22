@@ -1,3 +1,5 @@
+Comentário: todos os erros foram reportados corretamente. Nota 2.0
+
 Erros encontrados no código.
 
 1º erro:
