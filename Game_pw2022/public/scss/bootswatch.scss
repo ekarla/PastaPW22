@@ -4,7 +4,7 @@
 
 // Variables
 
-$body-bg-image: shade-color($pink, 15%) !default;
+$body-bg-image: shade-color($pink,15%) !default;
 $frosted-opacity: .3 !default;
 
 @mixin glass($opacity: $frosted-opacity, $bg: $white) {
@@ -30,8 +30,8 @@ $frosted-opacity: .3 !default;
 // Body
 
 body {
-  //background-image: $body-bg-image;
-  background-color:lightpink;
+  background-image: $body-bg-image;
+  //background-color:rgb(138, 91, 53);
 }
 
 // Tables

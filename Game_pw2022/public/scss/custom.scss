@@ -1,5 +1,7 @@
 .main-body{
     margin-top: 90px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .text-index{
@@ -9,9 +11,11 @@
     text-align: center;
 }
 .image-index{
-    background-image: url("/img/bannerSkifree.jpg");
-    width: 400px;
-    height: 400px;
+    background-image: url("/img/Skifree.png");
+    margin-top: 20px;
+    width: 1400px;
+    height: 700px;
+    background-size: 100% 100%;
 
 }
 
@@ -21,7 +25,7 @@ form [type="submit"]{
 
 
 .campo-opcoes a{
-    padding-left: 2px;
+    padding-left: 8px;
 }
 .campo-opcoes{
     text-align: right;
@@ -29,3 +33,20 @@ form [type="submit"]{
 .campo-id{
     width: 40px;
 }
+
+.card-cursos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: palevioletred;
+}
+
+.index-cursos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.botao{
+    margin-top: 5px;
+}
+
